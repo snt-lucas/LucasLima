@@ -480,6 +480,39 @@ img {
   display: block;
 }
 
+/* Botão de Alternância de Idioma (i18n) */
+.lang-btn {
+  height: 38px;
+  padding: 0 12px;
+  border-radius: var(--radius-full);
+  background: var(--chip-bg);
+  border: 1px solid var(--chip-border);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  color: var(--text-primary);
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  transition: all var(--transition-fast);
+  cursor: pointer;
+}
+
+.lang-btn:hover {
+  background: var(--bg-surface-hover);
+  border-color: var(--border-hover);
+  color: var(--accent-primary);
+  transform: translateY(-2px);
+}
+
+.lang-btn .lang-icon {
+  width: 15px;
+  height: 15px;
+  color: var(--accent-primary);
+}
+
 /* Menu Hambúrguer (Mobile) */
 .mobile-menu-btn {
   display: none;
