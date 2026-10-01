@@ -1,5 +1,9 @@
 # Portfólio Lucas Lima
 
+<!-- portfolio-summary:
+Portfólio interativo de alta performance construído com JavaScript Vanilla, CSS Moderno (Bento Box & Dark Mode nativo) e HTML5 semântico (WCAG 2.1 AA). Apresenta integração dinâmica com a API do GitHub para espelhamento em tempo real do README, sistema resiliente de cache em sessionStorage e arquitetura estrita Zero-XSS.
+-->
+
 Portfólio profissional e interativo desenvolvido com foco em UI/UX moderna, arquitetura **Bento Box**, suporte nativo a **Dark Mode**, microinterações elegantes e consumo dinâmico da API pública do GitHub.
 
 O portfólio destaca a evolução de **Lucas Lima** na área de desenvolvimento de software: **Desenvolvedor de Software Back-end** com domínio em **Python (FastAPI)**, **Java** e **Kotlin**, formação como **Bacharel em Sistemas de Informação pela PUC Minas**, atuação como ex-estagiário de Engenharia de Software no **Google** (ecossistema Android, TDD, Mockito, Device Capabilities e BugReport nativo), vivência prévia em plataformas **SaaS** (Sólides) e governança de infraestrutura corporativa/bancos de dados (Linux, Oracle, MSSQL e AWS).
