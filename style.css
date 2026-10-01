@@ -1560,6 +1560,44 @@ img {
   }
 }
 
+.projects-actions-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 12px 0 32px;
+  gap: 16px;
+}
+
+.btn-load-more {
+  padding: 12px 28px;
+  font-weight: 600;
+  border-radius: var(--radius-md);
+  box-shadow: 0 4px 14px var(--accent-glow);
+  transition: all var(--transition-fast);
+}
+
+.btn-load-more:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+  transform: none !important;
+}
+
+.projects-end-message {
+  font-size: 0.95rem;
+  font-family: var(--font-mono);
+  color: var(--text-secondary);
+  text-align: center;
+  padding: 10px 22px;
+  background: var(--chip-bg);
+  border: 1px dashed var(--chip-border);
+  border-radius: var(--radius-full);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  animation: fadeIn 0.4s ease-out;
+}
+
 .projects-cta {
   display: flex;
   justify-content: center;

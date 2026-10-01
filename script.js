@@ -529,19 +529,6 @@
           isCustomFeatured: true,
           type: "Automação & Dados",
         },
-        {
-          name: "ProjetoCapa",
-          description:
-            "Portfólio moderno em estética Neo-Minimalista com arquitetura Bento Box, suporte nativo a temas (Dark/Light), microinterações e integração dinâmica com a API do GitHub.",
-          language: "JavaScript / CSS3 / HTML5",
-          topics: ["neo-minimalism", "bento-box", "dark-mode", "portfolio"],
-          html_url: "https://github.com/snt-lucas/ProjetoCapa",
-          homepage: null,
-          stargazers_count: 0,
-          pushed_at: "2024-01-07T21:34:15Z",
-          isCustomFeatured: true,
-          type: "Engenharia Front-end",
-        },
       ];
 
       this.init();

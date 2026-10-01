@@ -854,7 +854,7 @@
           <div class="header-inline">
             <div>
               <span class="section-kicker">Portfólio de Código</span>
-              <h2 class="section-title">Projetos em Destaque</h2>
+              <h2 class="section-title">Projetos Pessoais</h2>
             </div>
             <div
               class="github-sync-status"
@@ -866,16 +866,14 @@
             </div>
           </div>
           <p class="section-subtitle">
-            Projetos autorais e colaborativos integrados dinamicamente com a API
-            do GitHub (<a
+            Projetos autorais integrados via API do GitHub (<a
               href="https://github.com/snt-lucas"
               target="_blank"
               rel="noopener noreferrer"
               class="link-subtle"
               aria-label="Perfil de snt-lucas no GitHub (abre em nova aba)"
               >@snt-lucas</a
-            >), destacando o motor de busca e detecção de phishing
-            <strong>Phishio</strong>.
+            >).
           </p>
         </div>
 
@@ -902,6 +900,39 @@
             <div class="skeleton-line text short"></div>
             <div class="skeleton-footer"></div>
           </div>
+        </div>
+
+        <!-- Ações de Carregamento Dinâmico (Ver Mais / Fim dos Repositórios) -->
+        <div class="projects-actions-container">
+          <button
+            type="button"
+            id="load-more-projects-btn"
+            class="btn btn-primary btn-load-more"
+            aria-label="Carregar mais repositórios do GitHub"
+            style="display: none"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              class="btn-icon"
+              aria-hidden="true"
+            >
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+            <span>Ver Mais</span>
+          </button>
+          <p
+            id="projects-end-message"
+            class="projects-end-message"
+            role="status"
+            aria-live="polite"
+            style="display: none"
+          >
+            Por enquanto é isso 😊
+          </p>
         </div>
 
         <div class="projects-cta">
@@ -941,12 +972,12 @@
                 <span>Vamos Construir Algo Incrível</span>
               </span>
               <h2 class="contact-title">
-                Pronto para impulsionar novos desafios de tecnologia?
+                Gostou do que viu? Entre em contato!
               </h2>
               <p class="contact-desc">
                 Seja para discutir oportunidades em
-                <strong>Desenvolvimento de Software Back-end</strong>,
-                colaboração em projetos de impacto ou desafios de engenharia,
+                <strong>Desenvolvimento de Software</strong>,
+                colaboração em projetos ou desafios de engenharia,
                 meu canal direto está aberto.
               </p>
 
