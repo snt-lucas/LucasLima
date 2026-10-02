@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="pt-BR" data-theme="dark">
   <head>
     <meta charset="UTF-8" />
@@ -15,8 +15,6 @@
       content="Lucas Lima, Lucas dos Santos Lima, Desenvolvedor Back-end, Python, FastAPI, Java, Kotlin, APIs REST, Google, PUC Minas, Sistemas de Informação, TDD, Mockito, AWS, Docker, AI-First"
     />
     <meta name="author" content="Lucas dos Santos Lima" />
-
-    <!-- Open Graph / Meta Compartilhamento -->
     <meta property="og:type" content="website" />
     <meta
       property="og:title"
@@ -27,67 +25,95 @@
       content="Portfólio de Lucas Lima — Desenvolvedor Back-end (Python, Java, APIs RESTful, Cloud & Automações com IA), ex-Google e Bacharel em Sistemas de Informação (PUC Minas)."
     />
     <meta property="og:image" content="./assets/avatar.png" />
-
-    <!-- Fontes Google (Inter & JetBrains Mono para toques de código) -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
-
-    <!-- Folha de Estilos Principal -->
     <link rel="stylesheet" href="./style.css" />
   </head>
-
   <body>
-    <!-- Link Acessível para Navegação por Teclado (WCAG 2.1) -->
-    <a href="#main-content" class="skip-to-content"
+    <a href="#main-content" class="skip-to-content" data-i18n="skip.content"
       >Pular para o conteúdo principal</a
     >
-
-    <!-- Camada de Fundo Estilizada com Imagens dos Assets e Overlay Sutil -->
     <div class="background-backdrop" aria-hidden="true">
       <div class="bg-image-layer"></div>
       <div class="bg-gradient-overlay"></div>
       <div class="ambient-glow"></div>
     </div>
-
-    <!-- Barra de Navegação Superior Flutuante (Neo-Dock) -->
     <header class="header">
       <nav class="nav-container" aria-label="Navegação Principal">
         <a
           href="#hero"
           class="nav-brand"
+          data-i18n-aria="nav.brandAria"
           aria-label="Página inicial de Lucas Lima"
         >
           <span class="brand-code">&lt;</span>Lucas Lima<span class="brand-code"
             >/&gt;</span
           >
         </a>
-
         <div class="nav-links" id="nav-links">
-          <a href="#hero" class="nav-link active">Sobre</a>
-          <a href="#experiencia" class="nav-link">Experiência</a>
-          <a href="#habilidades" class="nav-link">Habilidades</a>
-          <a href="#projetos" class="nav-link">Projetos</a>
-          <a href="#contato" class="nav-link">Contato</a>
+          <a href="#hero" class="nav-link active" data-i18n="nav.about"
+            >Sobre</a
+          >
+          <a href="#experiencia" class="nav-link" data-i18n="nav.experience"
+            >Experiência</a
+          >
+          <a href="#habilidades" class="nav-link" data-i18n="nav.skills"
+            >Habilidades</a
+          >
+          <a href="#projetos" class="nav-link" data-i18n="nav.projects"
+            >Projetos</a
+          >
+          <a href="#contato" class="nav-link" data-i18n="nav.contact"
+            >Contato</a
+          >
         </div>
-
         <div class="nav-actions">
-          <!-- Indicador de Status Disponibilidade -->
           <div
             class="status-indicator"
+            data-i18n-title="nav.statusTitle"
             title="Disponível para novos desafios e colaborações"
           >
             <span class="status-dot"></span>
-            <span class="status-text">Disponível</span>
+            <span class="status-text" data-i18n="nav.statusText"
+              >Disponível</span
+            >
           </div>
-
-          <!-- Botão de Alternância de Tema -->
+          <button
+            id="lang-toggle"
+            class="lang-btn"
+            data-i18n-aria="nav.langAria"
+            data-i18n-title="nav.langTitle"
+            aria-label="Switch language to English (en-US)"
+            title="Mudar para Inglês (en-US)"
+          >
+            <svg
+              class="lang-icon"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="2" y1="12" x2="22" y2="12"></line>
+              <path
+                d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"
+              ></path>
+            </svg>
+            <span class="lang-text" id="lang-indicator">EN</span>
+          </button>
           <button
             id="theme-toggle"
             class="theme-btn"
+            data-i18n-aria="nav.themeAria"
+            data-i18n-title="nav.themeTitle"
             aria-label="Alternar entre tema claro e escuro"
             title="Alternar tema"
           >
@@ -126,11 +152,10 @@
               <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
             </svg>
           </button>
-
-          <!-- Botão de Menu Mobile -->
           <button
             id="mobile-menu-btn"
             class="mobile-menu-btn"
+            data-i18n-aria="nav.mobileAria"
             aria-label="Abrir ou fechar menu de navegação"
             aria-controls="nav-links"
             aria-expanded="false"
@@ -142,13 +167,9 @@
         </div>
       </nav>
     </header>
-
-    <!-- Container Principal do Conteúdo -->
     <main class="main-wrapper" id="main-content" tabindex="-1">
-      <!-- ==================== SEÇÃO 1: HERO SECTION ==================== -->
       <section id="hero" class="hero-section">
         <div class="bento-grid hero-bento">
-          <!-- Card Principal de Apresentação (Grande) -->
           <div class="bento-card hero-main-card">
             <div class="profile-header">
               <div class="avatar-wrapper">
@@ -182,20 +203,21 @@
               <div class="profile-intro">
                 <div class="badge-pill">
                   <span class="badge-pulse"></span>
-                  <span
+                  <span data-i18n="hero.academicPill"
                     >Bacharel em Sistemas de Informação • PUC Minas •
                     Concluído</span
                   >
                 </div>
-                <h1 class="hero-name">Lucas dos Santos Lima</h1>
-                <p class="hero-tagline">
+                <h1 class="hero-name" data-i18n="hero.name">
+                  Lucas dos Santos Lima
+                </h1>
+                <p class="hero-tagline" data-i18n="hero.tagline">
                   Desenvolvedor de Software Back-end | Python &amp; Java | APIs
                   REST | Cloud &amp; Automações com IA
                 </p>
               </div>
             </div>
-
-            <p class="hero-bio">
+            <p class="hero-bio" data-i18n-html="hero.bio">
               Bacharel em Sistemas de Informação pela
               <strong>PUC Minas</strong> e ex-estagiário de Engenharia de
               Software no <strong>Google</strong>. Atuo no desenvolvimento de
@@ -208,12 +230,12 @@
               e bancos de dados (SQL/NoSQL) para diagnosticar gargalos e
               investigar causa raiz com maior precisão.
             </p>
-
             <div class="hero-actions">
               <a
                 href="#contato"
                 class="btn btn-primary"
                 id="btn-hero-contact"
+                data-i18n-aria="hero.btnContactAria"
                 aria-label="Ir para a seção de contato"
               >
                 <svg
@@ -229,12 +251,12 @@
                     d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"
                   ></path>
                 </svg>
-                <span>Vamos Conversar</span>
+                <span data-i18n="hero.btnContact">Vamos Conversar</span>
               </a>
-
               <button
                 class="btn btn-secondary"
                 id="btn-hero-cv"
+                data-i18n-aria="hero.btnCvAria"
                 aria-label="Baixar currículo de Lucas Lima em formato PDF"
               >
                 <svg
@@ -250,15 +272,15 @@
                   <polyline points="7 10 12 15 17 10"></polyline>
                   <line x1="12" y1="15" x2="12" y2="3"></line>
                 </svg>
-                <span>Baixar Currículo (PDF)</span>
+                <span data-i18n="hero.btnCv">Baixar Currículo (PDF)</span>
               </button>
-
               <a
                 href="#projetos"
                 class="btn btn-ghost"
+                data-i18n-aria="hero.btnProjectsAria"
                 aria-label="Navegar até a seção de projetos em destaque"
               >
-                <span>Ver Projetos</span>
+                <span data-i18n="hero.btnProjects">Ver Projetos</span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
@@ -274,8 +296,6 @@
               </a>
             </div>
           </div>
-
-          <!-- Card Lateral 1: Destaque Acadêmico PUC Minas -->
           <div class="bento-card stat-card">
             <div class="card-icon-header">
               <div class="icon-circle icon-academic" aria-hidden="true">
@@ -292,24 +312,26 @@
                   <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
                 </svg>
               </div>
-              <span class="card-kicker">Formação Acadêmica</span>
+              <span class="card-kicker" data-i18n="statPUC.kicker"
+                >Formação Acadêmica</span
+              >
             </div>
-            <h2 class="card-title">Bacharel em Sistemas de Informação</h2>
-            <p class="card-subtitle">
+            <h2 class="card-title" data-i18n="statPUC.title">
+              Bacharel em Sistemas de Informação
+            </h2>
+            <p class="card-subtitle" data-i18n="statPUC.subtitle">
               Pontifícia Universidade Católica de Minas Gerais (PUC Minas)
             </p>
-            <div class="stat-highlight">
+            <div class="stat-highlight" data-i18n-html="statPUC.date">
               <time datetime="2021-08">Ago 2021</time> —
               <time datetime="2026-07">Jul 2026</time> • Concluído
             </div>
-            <p class="card-description">
+            <p class="card-description" data-i18n="statPUC.desc">
               Formação no desenvolvimento de sistemas estruturados, arquitetura
               de software, bancos de dados relacionais e modelos de recuperação
               de informação.
             </p>
           </div>
-
-          <!-- Card Lateral 2: Destaque Google -->
           <div class="bento-card highlight-card">
             <div class="card-icon-header">
               <div class="icon-circle icon-google" aria-hidden="true">
@@ -325,13 +347,15 @@
                   ></path>
                 </svg>
               </div>
-              <span class="badge-tag">Engenharia de Software</span>
+              <span class="badge-tag" data-i18n="statGoogle.kicker"
+                >Engenharia de Software</span
+              >
             </div>
             <h2 class="card-title">Google</h2>
-            <p class="card-subtitle">
+            <p class="card-subtitle" data-i18n="statGoogle.subtitle">
               Estagiário em Engenharia de Software • Belo Horizonte
             </p>
-            <p class="card-description">
+            <p class="card-description" data-i18n="statGoogle.desc">
               Atuação no ecossistema Android atuando com Java e Kotlin no
               ambiente Family Link, aplicando realizando refatorações,
               implementações e realizando testes para garantir a qualidade do
@@ -340,41 +364,45 @@
               de bugs.
             </p>
           </div>
-
-          <!-- Card Métricas & Diferenciais -->
           <div class="bento-card metrics-card">
             <div class="metric-item">
-              <span class="metric-number">Back-end</span>
-              <span class="metric-label">Python, Java &amp; Kotlin</span>
+              <span class="metric-number" data-i18n="metrics.backendTitle"
+                >Back-end</span
+              >
+              <span class="metric-label" data-i18n="metrics.backendSubtitle"
+                >Python, Java &amp; Kotlin</span
+              >
             </div>
             <div class="metric-divider"></div>
             <div class="metric-item">
               <span class="metric-number">Google</span>
-              <span class="metric-label"
+              <span class="metric-label" data-i18n="metrics.googleSubtitle"
                 >Ex-Estagiário em Engenharia de Software</span
               >
             </div>
             <div class="metric-divider"></div>
             <div class="metric-item">
               <span class="metric-number">AI-First</span>
-              <span class="metric-label">Engenharia Assistida por IA</span>
+              <span class="metric-label" data-i18n="metrics.aiSubtitle"
+                >Engenharia Assistida por IA</span
+              >
             </div>
           </div>
         </div>
       </section>
-
-      <!-- ==================== SEÇÃO 2: EXPERIÊNCIA PROFISSIONAL ==================== -->
       <section id="experiencia" class="section-container">
         <div class="section-header">
-          <span class="section-kicker">Trajetória Profissional</span>
-          <h2 class="section-title">Experiência &amp; Atuação Técnica</h2>
-          <p class="section-subtitle">
+          <span class="section-kicker" data-i18n="experience.kicker"
+            >Trajetória Profissional</span
+          >
+          <h2 class="section-title" data-i18n="experience.title">
+            Experiência &amp; Atuação Técnica
+          </h2>
+          <p class="section-subtitle" data-i18n="experience.subtitle">
             Evolução constante unindo vivência em produtos SaaS em larga escala,
             engenharia de software e infraestrutura.
           </p>
         </div>
-
-        <!-- Filtros Dinâmicos da Timeline -->
         <div
           class="timeline-filters"
           role="tablist"
@@ -383,6 +411,7 @@
           <button
             class="filter-chip active"
             data-filter="all"
+            data-i18n="experience.filterAll"
             role="tab"
             aria-selected="true"
           >
@@ -391,6 +420,7 @@
           <button
             class="filter-chip"
             data-filter="eng"
+            data-i18n="experience.filterEng"
             role="tab"
             aria-selected="false"
           >
@@ -399,6 +429,7 @@
           <button
             class="filter-chip"
             data-filter="saas"
+            data-i18n="experience.filterSaas"
             role="tab"
             aria-selected="false"
           >
@@ -407,16 +438,14 @@
           <button
             class="filter-chip"
             data-filter="infra"
+            data-i18n="experience.filterInfra"
             role="tab"
             aria-selected="false"
           >
             Infraestrutura &amp; Cloud
           </button>
         </div>
-
-        <!-- Timeline Container -->
         <div class="timeline-wrapper">
-          <!-- Experiência 1: Google -->
           <article class="timeline-card" data-category="eng">
             <div class="timeline-dot-wrapper">
               <div class="timeline-dot google-accent"></div>
@@ -426,17 +455,21 @@
               <div class="timeline-top">
                 <div>
                   <span class="timeline-company google-badge">Google</span>
-                  <h3 class="timeline-role">
+                  <h3 class="timeline-role" data-i18n="expGoogle.role">
                     Estagiário em Engenharia de Software
                   </h3>
-                  <span class="timeline-location">Belo Horizonte, MG</span>
+                  <span class="timeline-location" data-i18n="expGoogle.location"
+                    >Belo Horizonte, MG</span
+                  >
                 </div>
-                <span class="timeline-badge date-badge"
+                <span
+                  class="timeline-badge date-badge"
+                  data-i18n-html="expGoogle.date"
                   ><time datetime="2024-09">Set 2024</time> —
                   <time datetime="2026-03">Mar 2026</time></span
                 >
               </div>
-              <p class="timeline-desc">
+              <p class="timeline-desc" data-i18n="expGoogle.desc">
                 Atuação no ecossistema Android utilizando Java e Kotlin atuando
                 na implementação e manutenção de funcionalidades no ambinete
                 Android com times do Family Link, criação e adaptação de testes
@@ -444,18 +477,18 @@
                 Reviews bidirecionais com outros times de engenharia:
               </p>
               <ul class="timeline-achievements">
-                <li>
+                <li data-i18n-html="expGoogle.ach1">
                   <strong>Qualidade &amp; TDD:</strong> Garantia da qualidade
                   das entregas aplicando Test-Driven Development (TDD) com
                   testes unitários e parametrizados utilizando Mockito.
                 </li>
-                <li>
+                <li data-i18n-html="expGoogle.ach2">
                   <strong>Backend &amp; Desacoplamento:</strong> Participação em
                   melhorias que centralizaram o cálculo de
                   <em>device capabilities</em> no backend, reduzindo acoplamento
                   e redundância lógica entre servidores e dispositivos móveis.
                 </li>
-                <li>
+                <li data-i18n-html="expGoogle.ach3">
                   <strong>Triagem de Anomalias &amp; Logs:</strong>
                   Implementação de melhorias no BugReport nativo de dispositivos
                   Android, convertendo flags brutas de sensores em logs legíveis
@@ -472,8 +505,6 @@
               </div>
             </div>
           </article>
-
-          <!-- Experiência 2: Sólides Tecnologia -->
           <article class="timeline-card" data-category="saas">
             <div class="timeline-dot-wrapper">
               <div class="timeline-dot solides-accent"></div>
@@ -483,36 +514,42 @@
               <div class="timeline-top">
                 <div>
                   <span class="timeline-company">Sólides Tecnologia</span>
-                  <h3 class="timeline-role">
+                  <h3 class="timeline-role" data-i18n="expSolides.role">
                     Estagiário / Analista de Suporte Técnico Jr
                   </h3>
-                  <span class="timeline-location">Belo Horizonte, MG</span>
+                  <span
+                    class="timeline-location"
+                    data-i18n="expSolides.location"
+                    >Belo Horizonte, MG</span
+                  >
                 </div>
-                <span class="timeline-badge date-badge"
+                <span
+                  class="timeline-badge date-badge"
+                  data-i18n-html="expSolides.date"
                   ><time datetime="2023-04">Abr 2023</time> —
                   <time datetime="2024-09">Set 2024</time></span
                 >
               </div>
-              <p class="timeline-desc">
+              <p class="timeline-desc" data-i18n="expSolides.desc">
                 Atuação no suporte técnico N1 na plataforma SaaS da empresa,
                 prestando atendimento a demandas técnicas de clientes
                 corporativos e atuando na ponte entre Engenharia de Software e
                 Banco de Dados:
               </p>
               <ul class="timeline-achievements">
-                <li>
+                <li data-i18n-html="expSolides.ach1">
                   <strong>Diagnóstico &amp; Mitigação:</strong> Diagnóstico e
                   mitigação de falhas funcionais de baixa e média complexidade,
                   controle de permissões de acesso e análise de divergências
                   contratuais no sistema.
                 </li>
-                <li>
+                <li data-i18n-html="expSolides.ach2">
                   <strong>Validação de Correções (QA):</strong> Reprodução de
                   anomalias sistêmicas, documentação de inconsistências de dados
                   e validação e testes de correções de bugs após correção pelos
                   desenvolvedores.
                 </li>
-                <li>
+                <li data-i18n-html="expSolides.ach3">
                   <strong>Capacitação &amp; Documentação:</strong> Elaboração de
                   documentações técnicas internas, guias de resolução de
                   incidentes, manuais do usuário e apoio na capacitação técnica
@@ -528,8 +565,6 @@
               </div>
             </div>
           </article>
-
-          <!-- Experiência 3: Netscanner Soluções em TI -->
           <article class="timeline-card" data-category="infra">
             <div class="timeline-dot-wrapper">
               <div class="timeline-dot infra-accent"></div>
@@ -541,40 +576,48 @@
                   <span class="timeline-company"
                     >Netscanner Soluções em TI</span
                   >
-                  <h3 class="timeline-role">Estagiário de Suporte Técnico</h3>
-                  <span class="timeline-location">Belo Horizonte, MG</span>
+                  <h3 class="timeline-role" data-i18n="expNetscanner.role">
+                    Estagiário de Suporte Técnico
+                  </h3>
+                  <span
+                    class="timeline-location"
+                    data-i18n="expNetscanner.location"
+                    >Belo Horizonte, MG</span
+                  >
                 </div>
-                <span class="timeline-badge date-badge"
+                <span
+                  class="timeline-badge date-badge"
+                  data-i18n-html="expNetscanner.date"
                   ><time datetime="2022-11">Nov 2022</time> —
                   <time datetime="2023-03">Mar 2023</time></span
                 >
               </div>
-              <p class="timeline-desc">
+              <p class="timeline-desc" data-i18n="expNetscanner.desc">
                 Suporte de N1 à infraestrutura corporativa (Windows
                 Server/Active Directory) e atendimento remoto, elaborando
                 tutoriais de onboarding para facilitar migrações ao Microsoft
                 365:
               </p>
               <ul class="timeline-achievements">
-                <li>
+                <li data-i18n-html="expNetscanner.ach1">
                   <strong>Windows Server &amp; AD:</strong> Configuração de
                   impressoras em rede, contas e permissões no AD/Windows Server,
                   mapeamento de rede e e-mails corporativos (SMTP, IMAP, POP,
                   Zimbra e Thunderbird).
                 </li>
-                <li>
+                <li data-i18n-html="expNetscanner.ach2">
                   <strong>Microsoft 365 Cloud:</strong> Gestão de licenças,
                   suporte ao e-mail Exchange e treinamentos no Microsoft 365
                   (Excel, PowerPoint, Word, OneDrive, SharePoint, Teams e To
                   Do).
                 </li>
-                <li>
+                <li data-i18n-html="expNetscanner.ach3">
                   <strong>Operações &amp; Suporte Remoto:</strong> Manutenção
                   básica de computadores, inventário de hardware via OCS,
                   suporte remoto via LogMeIn e preparação de dispositivos para
                   colaboradores.
                 </li>
-                <li>
+                <li data-i18n-html="expNetscanner.ach4">
                   <strong>Documentação &amp; Tutoriais:</strong> Criação de
                   tutoriais de onboarding para novos usuários, padronizando
                   processos e facilitando a migração para o Microsoft 365.
@@ -589,8 +632,6 @@
               </div>
             </div>
           </article>
-
-          <!-- Experiência 4: Log.One -->
           <article class="timeline-card" data-category="infra">
             <div class="timeline-dot-wrapper">
               <div class="timeline-dot logone-accent"></div>
@@ -599,34 +640,38 @@
               <div class="timeline-top">
                 <div>
                   <span class="timeline-company">Log.One</span>
-                  <h3 class="timeline-role">
+                  <h3 class="timeline-role" data-i18n="expLogOne.role">
                     Estagiário de Suporte de Infraestrutura
                   </h3>
-                  <span class="timeline-location">Remoto</span>
+                  <span class="timeline-location" data-i18n="expLogOne.location"
+                    >Remoto</span
+                  >
                 </div>
-                <span class="timeline-badge date-badge"
+                <span
+                  class="timeline-badge date-badge"
+                  data-i18n-html="expLogOne.date"
                   ><time datetime="2021-10">Out 2021</time> —
                   <time datetime="2022-07">Jul 2022</time></span
                 >
               </div>
-              <p class="timeline-desc">
+              <p class="timeline-desc" data-i18n="expLogOne.desc">
                 Suporte corporativo remoto, rotinas de manutenção em nuvem AWS e
                 gerenciamento de bancos de dados relacionais:
               </p>
               <ul class="timeline-achievements">
-                <li>
+                <li data-i18n-html="expLogOne.ach1">
                   <strong>Serviços de E-mail &amp; Nuvem AWS:</strong> Suporte
                   corporativo e configuração de serviços de e-mail sob
                   protocolos SMTP, POP e IMAP, monitoramento de disponibilidade
                   e execução de rotinas de backup e manutenção de instâncias em
                   nuvem (AWS).
                 </li>
-                <li>
+                <li data-i18n-html="expLogOne.ach2">
                   <strong>Servidores Linux:</strong> Atualização de pacotes e
                   softwares em servidores virtualizados Linux, mantendo
                   documentações operacionais atualizadas.
                 </li>
-                <li>
+                <li data-i18n-html="expLogOne.ach3">
                   <strong>Oracle &amp; SQL Server:</strong> Execução de scripts
                   para atualização, importação e exportação de dados em bancos
                   Oracle e SQL Server.
@@ -643,22 +688,20 @@
           </article>
         </div>
       </section>
-
-      <!-- ==================== SEÇÃO 3: HABILIDADES TÉCNICAS (BENTO GRID) ==================== -->
       <section id="habilidades" class="section-container">
         <div class="section-header">
-          <span class="section-kicker">Capacidades &amp; Conhecimento</span>
-          <h2 class="section-title">
+          <span class="section-kicker" data-i18n="skills.kicker"
+            >Capacidades &amp; Conhecimento</span
+          >
+          <h2 class="section-title" data-i18n="skills.title">
             Habilidades Técnicas &amp; Metodológicas
           </h2>
-          <p class="section-subtitle">
+          <p class="section-subtitle" data-i18n="skills.subtitle">
             Combinação de competências práticas em engenharia de software,
             manipulação de dados, infraestrutura e oratória.
           </p>
         </div>
-
         <div class="bento-grid skills-bento">
-          <!-- Card 1: Linguagens & Frameworks -->
           <div class="bento-card skill-group-card">
             <div class="skill-group-header">
               <div class="icon-circle icon-code">
@@ -674,8 +717,10 @@
                 </svg>
               </div>
               <div>
-                <h3 class="skill-group-title">Linguagens &amp; Frameworks</h3>
-                <p class="skill-group-desc">
+                <h3 class="skill-group-title" data-i18n="skillGroup1.title">
+                  Linguagens &amp; Frameworks
+                </h3>
+                <p class="skill-group-desc" data-i18n="skillGroup1.desc">
                   Construção de APIs resilientes e código estruturado
                 </p>
               </div>
@@ -689,8 +734,6 @@
               <span class="chip">JavaScript (ES6+)</span>
             </div>
           </div>
-
-          <!-- Card 2: Bancos de Dados & Nuvem -->
           <div class="bento-card skill-group-card">
             <div class="skill-group-header">
               <div class="icon-circle icon-database">
@@ -707,8 +750,10 @@
                 </svg>
               </div>
               <div>
-                <h3 class="skill-group-title">Bancos de Dados &amp; Nuvem</h3>
-                <p class="skill-group-desc">
+                <h3 class="skill-group-title" data-i18n="skillGroup2.title">
+                  Bancos de Dados &amp; Nuvem
+                </h3>
+                <p class="skill-group-desc" data-i18n="skillGroup2.desc">
                   Modelagem relacional, persistência e computação em nuvem
                 </p>
               </div>
@@ -722,8 +767,6 @@
               <span class="chip">AWS (EC2, S3, Monitoramento)</span>
             </div>
           </div>
-
-          <!-- Card 3: Engenharia, Testes & Qualidade -->
           <div class="bento-card skill-group-card">
             <div class="skill-group-header">
               <div class="icon-circle icon-process">
@@ -739,10 +782,10 @@
                 </svg>
               </div>
               <div>
-                <h3 class="skill-group-title">
+                <h3 class="skill-group-title" data-i18n="skillGroup3.title">
                   Engenharia, Testes &amp; Qualidade
                 </h3>
-                <p class="skill-group-desc">
+                <p class="skill-group-desc" data-i18n="skillGroup3.desc">
                   Arquitetura de software e garantia de estabilidade
                 </p>
               </div>
@@ -753,16 +796,18 @@
               >
               <span class="chip">JUnit &amp; Mockito</span>
               <span class="chip">Pytest</span>
-              <span class="chip">Code Review Bidirecional</span>
-              <span class="chip">Arquitetura de APIs RESTful</span>
+              <span class="chip" data-i18n="skillGroup3.codeReview"
+                >Code Review Bidirecional</span
+              >
+              <span class="chip" data-i18n="skillGroup3.restArch"
+                >Arquitetura de APIs RESTful</span
+              >
               <span class="chip">FastAPI</span>
-              <span class="chip"
+              <span class="chip" data-i18n="skillGroup3.ir"
                 >Recuperação de Informação (TF-IDF &amp; Busca Vetorial)</span
               >
             </div>
           </div>
-
-          <!-- Card 4: DevOps, Infra & Confiabilidade -->
           <div class="bento-card skill-group-card">
             <div class="skill-group-header">
               <div class="icon-circle icon-server">
@@ -780,10 +825,10 @@
                 </svg>
               </div>
               <div>
-                <h3 class="skill-group-title">
+                <h3 class="skill-group-title" data-i18n="skillGroup4.title">
                   DevOps, Infra &amp; Confiabilidade
                 </h3>
-                <p class="skill-group-desc">
+                <p class="skill-group-desc" data-i18n="skillGroup4.desc">
                   Observabilidade, servidores e diagnóstico de produção
                 </p>
               </div>
@@ -791,14 +836,20 @@
             <div class="tag-cloud">
               <span class="chip chip-accent">Docker</span>
               <span class="chip">Git / GitHub</span>
-              <span class="chip">Linux (Servidores / Virtualização)</span>
-              <span class="chip">Leitura e Enriquecimento de Logs</span>
-              <span class="chip">Análise de Causa Raiz (RCA)</span>
-              <span class="chip">Troubleshooting Sistêmico</span>
+              <span class="chip" data-i18n="skillGroup4.linux"
+                >Linux (Servidores / Virtualização)</span
+              >
+              <span class="chip" data-i18n="skillGroup4.logs"
+                >Leitura e Enriquecimento de Logs</span
+              >
+              <span class="chip" data-i18n="skillGroup4.rca"
+                >Análise de Causa Raiz (RCA)</span
+              >
+              <span class="chip" data-i18n="skillGroup4.troubleshooting"
+                >Troubleshooting Sistêmico</span
+              >
             </div>
           </div>
-
-          <!-- Card 5: Produtividade com IA, Soft Skills & Idiomas (Destaque Largo) -->
           <div class="bento-card skill-group-card soft-skills-card">
             <div class="skill-group-header">
               <div class="icon-circle icon-speech">
@@ -815,24 +866,29 @@
                 </svg>
               </div>
               <div>
-                <h3 class="skill-group-title">
+                <h3 class="skill-group-title" data-i18n="skillGroup5.title">
                   Produtividade com IA, Comunicação &amp; Idiomas
                 </h3>
-                <p class="skill-group-desc">
+                <p class="skill-group-desc" data-i18n="skillGroup5.desc">
                   Engenharia AI-First, automação e articulação técnica
                   interdisciplinar
                 </p>
               </div>
             </div>
             <div class="tag-cloud">
-              <span class="chip chip-highlight"
+              <span class="chip chip-highlight" data-i18n="skillGroup5.aiDev"
                 >Desenvolvimento Assistido por IA</span
               >
-              <span class="chip chip-highlight"
+              <span class="chip chip-highlight" data-i18n="skillGroup5.testGen"
                 >Geração de Suítes de Teste &amp; Refatoração</span
               >
-              <span class="chip">Automação de Workflows</span>
-              <span class="chip chip-accent">
+              <span class="chip" data-i18n="skillGroup5.workflow"
+                >Automação de Workflows</span
+              >
+              <span
+                class="chip chip-accent"
+                data-i18n-html="skillGroup5.english"
+              >
                 Inglês Intermediário (<a
                   href="https://certs.duolingo.com/3p4306smp786ay4v"
                   target="_blank"
@@ -840,21 +896,29 @@
                   >B1</a
                 >)
               </span>
-              <span class="chip">Espanhol (Básico)</span>
-              <span class="chip">Comunicação Assertiva</span>
-              <span class="chip">Visão Sistêmica de Negócios</span>
+              <span class="chip" data-i18n="skillGroup5.spanish"
+                >Espanhol (Básico)</span
+              >
+              <span class="chip" data-i18n="skillGroup5.comm"
+                >Comunicação Assertiva</span
+              >
+              <span class="chip" data-i18n="skillGroup5.biz"
+                >Visão Sistêmica de Negócios</span
+              >
             </div>
           </div>
         </div>
       </section>
-
-      <!-- ==================== SEÇÃO 4: PROJETOS EM DESTAQUE (GITHUB API) ==================== -->
       <section id="projetos" class="section-container">
         <div class="section-header">
           <div class="header-inline">
             <div>
-              <span class="section-kicker">Portfólio de Código</span>
-              <h2 class="section-title">Projetos Pessoais</h2>
+              <span class="section-kicker" data-i18n="projects.kicker"
+                >Portfólio de Código</span
+              >
+              <h2 class="section-title" data-i18n="projects.title">
+                Projetos Pessoais
+              </h2>
             </div>
             <div
               class="github-sync-status"
@@ -865,7 +929,7 @@
               <span id="github-status-text">Conectando ao GitHub API...</span>
             </div>
           </div>
-          <p class="section-subtitle">
+          <p class="section-subtitle" data-i18n-html="projects.subtitle">
             Projetos autorais integrados via API do GitHub (<a
               href="https://github.com/snt-lucas"
               target="_blank"
@@ -876,13 +940,11 @@
             >).
           </p>
         </div>
-
-        <!-- Grid de Projetos -->
         <div class="projects-grid" id="projects-container" aria-live="polite">
-          <!-- Renderizado dinamicamente via script.js (com fallback imediato para Phishio, FoodFlow-ERP, RIWRS_Colector e ProjetoCapa) -->
           <div
             class="project-skeleton"
             role="status"
+            data-i18n-aria="projects.loadingReposAria"
             aria-label="Carregando repositórios do GitHub..."
           >
             <div class="skeleton-line title"></div>
@@ -893,6 +955,7 @@
           <div
             class="project-skeleton"
             role="status"
+            data-i18n-aria="projects.loadingReposAria"
             aria-label="Carregando repositórios do GitHub..."
           >
             <div class="skeleton-line title"></div>
@@ -901,13 +964,12 @@
             <div class="skeleton-footer"></div>
           </div>
         </div>
-
-        <!-- Ações de Carregamento Dinâmico (Ver Mais / Fim dos Repositórios) -->
         <div class="projects-actions-container">
           <button
             type="button"
             id="load-more-projects-btn"
             class="btn btn-primary btn-load-more"
+            data-i18n-aria="projects.loadMoreAria"
             aria-label="Carregar mais repositórios do GitHub"
             style="display: none"
           >
@@ -922,25 +984,26 @@
             >
               <polyline points="6 9 12 15 18 9"></polyline>
             </svg>
-            <span>Ver Mais</span>
+            <span data-i18n="projects.loadMore">Ver Mais</span>
           </button>
           <p
             id="projects-end-message"
             class="projects-end-message"
             role="status"
             aria-live="polite"
+            data-i18n="projects.endMessage"
             style="display: none"
           >
             Por enquanto é isso 😊
           </p>
         </div>
-
         <div class="projects-cta">
           <a
             href="https://github.com/snt-lucas?tab=repositories"
             target="_blank"
             rel="noopener noreferrer"
             class="btn btn-secondary"
+            data-i18n-aria="projects.exploreGithubAria"
             aria-label="Explorar todos os repositórios públicos de Lucas Lima no GitHub (abre em nova aba)"
           >
             <svg
@@ -956,31 +1019,31 @@
                 d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
               ></path>
             </svg>
-            <span>Explorar Todos os Repositórios no GitHub</span>
+            <span data-i18n="projects.exploreGithub"
+              >Explorar Todos os Repositórios no GitHub</span
+            >
           </a>
         </div>
       </section>
-
-      <!-- ==================== SEÇÃO 5: CONTATO ESTRATÉGICO ==================== -->
       <section id="contato" class="section-container">
         <div class="contact-bento">
-          <!-- Card de Chamada para Ação Principal -->
           <div class="bento-card contact-hero-card">
             <div class="contact-hero-content">
               <span class="badge-pill">
                 <span class="badge-pulse"></span>
-                <span>Vamos Construir Algo Incrível</span>
+                <span data-i18n="contact.badge"
+                  >Vamos Construir Algo Incrível</span
+                >
               </span>
-              <h2 class="contact-title">
+              <h2 class="contact-title" data-i18n="contact.title">
                 Gostou do que viu? Entre em contato!
               </h2>
-              <p class="contact-desc">
+              <p class="contact-desc" data-i18n-html="contact.desc">
                 Seja para discutir oportunidades em
-                <strong>Desenvolvimento de Software</strong>,
-                colaboração em projetos ou desafios de engenharia,
-                meu canal direto está aberto.
+                <strong>Desenvolvimento de Software</strong>, colaboração em
+                projetos ou desafios de engenharia, meu canal direto está
+                aberto.
               </p>
-
               <div class="contact-buttons-group">
                 <a
                   href="https://wa.me/5531996166591?text=Ol%C3%A1%20Lucas!%20Vi%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20conversar%20sobre%20uma%20oportunidade."
@@ -988,6 +1051,7 @@
                   rel="noopener noreferrer"
                   class="btn btn-whatsapp"
                   id="btn-contact-whatsapp"
+                  data-i18n-aria="contact.btnWhatsappAria"
                   aria-label="Iniciar conversa no WhatsApp com Lucas Lima (abre em nova aba)"
                 >
                   <svg
@@ -1001,14 +1065,16 @@
                       d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"
                     ></path>
                   </svg>
-                  <span>Chamar no WhatsApp</span>
+                  <span data-i18n="contact.btnWhatsapp"
+                    >Chamar no WhatsApp</span
+                  >
                 </a>
-
                 <a
                   href="https://www.linkedin.com/in/snt-lucas/"
                   target="_blank"
                   rel="noopener noreferrer"
                   class="btn btn-linkedin"
+                  data-i18n-aria="contact.btnLinkedinAria"
                   aria-label="Acessar perfil de Lucas Lima no LinkedIn (abre em nova aba)"
                 >
                   <svg
@@ -1022,12 +1088,14 @@
                       d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
                     ></path>
                   </svg>
-                  <span>Conectar no LinkedIn</span>
+                  <span data-i18n="contact.btnLinkedin"
+                    >Conectar no LinkedIn</span
+                  >
                 </a>
-
                 <button
                   class="btn btn-secondary"
                   id="btn-copy-email"
+                  data-i18n-aria="contact.btnEmailAria"
                   aria-label="Copiar endereço de e-mail para a área de transferência"
                 >
                   <svg
@@ -1051,7 +1119,9 @@
                       d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"
                     ></path>
                   </svg>
-                  <span id="copy-email-text">Copiar E-mail</span>
+                  <span id="copy-email-text" data-i18n="contact.btnEmail"
+                    >Copiar E-mail</span
+                  >
                 </button>
               </div>
               <div class="info-row contact-location-row">
@@ -1070,8 +1140,12 @@
                   </svg>
                 </div>
                 <div class="info-meta">
-                  <span class="info-label">Localização</span>
-                  <span class="info-value">Belo Horizonte, MG • Brasil</span>
+                  <span class="info-label" data-i18n="contact.locationLabel"
+                    >Localização</span
+                  >
+                  <span class="info-value" data-i18n="contact.locationValue"
+                    >Belo Horizonte, MG • Brasil</span
+                  >
                 </div>
               </div>
             </div>
@@ -1079,24 +1153,23 @@
         </div>
       </section>
     </main>
-
-    <!-- ==================== RODAPÉ ELEGANTE ==================== -->
     <footer class="footer">
       <div class="footer-container">
         <div class="footer-left">
           <a
             href="#hero"
             class="footer-brand"
+            data-i18n-aria="footer.brandAria"
             aria-label="Ir para o início da página"
             >&lt;Lucas Lima /&gt;</a
           >
           <div class="footer-copyright">
-            <p class="footer-copyright-main">
+            <p class="footer-copyright-main" data-i18n-html="footer.copyright">
               &copy; <time id="current-year" datetime="2026">2026</time>
               <strong>Lucas dos Santos Lima</strong>. Todos os direitos
               reservados.
             </p>
-            <p class="footer-copyright-credit">
+            <p class="footer-copyright-credit" data-i18n-html="footer.credit">
               Criado com o auxílio do
               <span class="footer-highlight">Google Antigravity</span>
               utilizando <span class="footer-tech-tag">HTML5 Semântico</span>,
@@ -1106,7 +1179,6 @@
             </p>
           </div>
         </div>
-
         <div class="footer-social">
           <a
             href="https://github.com/snt-lucas"
@@ -1170,17 +1242,18 @@
         </div>
       </div>
     </footer>
-
-    <!-- ==================== BOTÃO FLUTUANTE DE AÇÃO (FAB WHATSAPP) ==================== -->
     <aside class="floating-fab-container">
       <a
         href="https://wa.me/5531996166591?text=Ol%C3%A1%20Lucas!%20Vi%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20conversar%20sobre%20uma%20oportunidade."
         target="_blank"
         rel="noopener noreferrer"
         class="fab-button"
+        data-i18n-aria="footer.fabAria"
         aria-label="Abrir conversa no WhatsApp com Lucas Lima (abre em nova aba)"
       >
-        <span class="fab-tooltip">Fale comigo no WhatsApp</span>
+        <span class="fab-tooltip" data-i18n="footer.fabTooltip"
+          >Fale comigo no WhatsApp</span
+        >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
@@ -1195,8 +1268,6 @@
         </svg>
       </a>
     </aside>
-
-    <!-- ==================== MODAL DE ESPELHO DO README.MD (GITHUB LIVE MIRROR) ==================== -->
     <div
       id="readme-modal"
       class="modal-backdrop"
@@ -1224,12 +1295,14 @@
             </svg>
             <div>
               <h2 id="readme-modal-title" class="modal-title">README.md</h2>
-              <span id="readme-modal-subtitle" class="modal-subtitle"
+              <span
+                id="readme-modal-subtitle"
+                class="modal-subtitle"
+                data-i18n="modal.subtitle"
                 >GitHub Live Mirror • snt-lucas</span
               >
             </div>
           </div>
-
           <div class="modal-actions">
             <a
               id="readme-modal-gh-link"
@@ -1237,6 +1310,7 @@
               target="_blank"
               rel="noopener noreferrer"
               class="btn btn-ghost btn-sm"
+              data-i18n-aria="modal.ghAria"
               aria-label="Abrir repositório no GitHub (abre em nova aba)"
             >
               <svg
@@ -1252,12 +1326,13 @@
                   d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
                 ></path>
               </svg>
-              <span>Ver no GitHub</span>
+              <span data-i18n="modal.viewGithub">Ver no GitHub</span>
             </a>
-
             <button
               id="readme-modal-close"
               class="modal-close-btn"
+              data-i18n-aria="modal.closeAria"
+              data-i18n-title="modal.closeTitle"
               aria-label="Fechar janela do README (pressione Esc)"
               title="Fechar (Esc)"
             >
@@ -1277,17 +1352,10 @@
             </button>
           </div>
         </div>
-
-        <div id="readme-modal-body" class="modal-body" tabindex="0">
-          <!-- Conteúdo do README renderizado dinamicamente via script.js -->
-        </div>
+        <div id="readme-modal-body" class="modal-body" tabindex="0"></div>
       </div>
     </div>
-
-    <!-- ==================== TOAST NOTIFICATION CONTAINER ==================== -->
     <div id="toast" class="toast" role="status" aria-live="polite"></div>
-
-    <!-- JavaScript Puro -->
     <script src="./script.js"></script>
   </body>
 </html>

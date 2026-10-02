@@ -2476,3 +2476,20 @@ img {
     right: 20px;
   }
 }
+
+@media (max-width: 480px) {
+  .nav-actions {
+    gap: 8px;
+  }
+
+  .lang-btn {
+    padding: 0 8px;
+    height: 34px;
+    font-size: 0.78rem;
+  }
+
+  .theme-btn {
+    width: 34px;
+    height: 34px;
+  }
+}
